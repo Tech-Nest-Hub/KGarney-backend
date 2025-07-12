@@ -8,6 +8,7 @@ import cors from 'cors'
 import helmet from 'helmet'
 import morgan from 'morgan'
 import { ServerConnection } from "../miscellanous/mongodb.js";
+import authRoute from '../routes/authRoute.js';
 
 
 
@@ -28,7 +29,7 @@ app.use(cors({
 
 
 
-
+app.use('/api/auth', authRoute);
 
 
 ServerConnection();
