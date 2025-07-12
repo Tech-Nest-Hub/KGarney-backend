@@ -22,6 +22,27 @@ const userSchema = new mongoose.Schema(
             minglength: 8,
 
         },
+        fname:{
+            type: String,
+            required: true,
+            minlength: 2,
+            maxlength: 20,
+            
+        },
+        lname:{
+            type: String,
+            minlength: 2,
+            maxlength: 20,
+        },
+        phoneNumber:{
+            type: String,
+            minlength: 10,
+            maxlength: 15,
+        },
+        location: {
+            type: String,
+            default: "",
+        },
         avatar: {
             type: String,
             default: "",
