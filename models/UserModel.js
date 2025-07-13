@@ -24,10 +24,8 @@ const userSchema = new mongoose.Schema(
         },
         fname:{
             type: String,
-            required: true,
             minlength: 2,
             maxlength: 20,
-            
         },
         lname:{
             type: String,
@@ -54,7 +52,7 @@ const userSchema = new mongoose.Schema(
         gender: {
             type: String,
             enum: ["male", "female", "other"],
-            default: "",
+            default: "other",
         }
     },
     { timestamps: true }
